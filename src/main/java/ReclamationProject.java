@@ -8,19 +8,41 @@
  * 5. Remove unnecessary comments as appropriate
  */
 
-public class ReclamationProject
-{
-    static String doit(String a,String b){
-        if (a.length() > b.length()){
-            String c = a; // TODO: set c to a
-            a=b; b=c;}
-        String r = (a.equals(b)) ? "" : ""; // I love the ternary operator!
-        /*
-         * For loop with i
-         */
-        for (int i = 0; i < a.length(); i++) { for (int j = a.length() - i; j > 0; j--) {
-                for (int k = 0; k < b.length()- j; k++) {
-                    r = (a.regionMatches(i, b, k, j) && j >r.length()) ? a.substring(i,i + j) : r; // Do it!
-                        }} // Ah yeah
-        } return r; }
+/**
+ * what the heck is r.
+ */
+public class ReclamationProject {
+    /**
+     * now I know what r is.
+     * @param a value
+     * @param b value
+     * @return something string
+     */
+    public static String longestSharedString(final String a, final String b) {
+        String first = a;
+        String second = b;
+        String shared = "";
+        if (a.length() > b.length()) {
+            String c = a;
+            first = b;
+            second = c;
+        }
+        for (int i = 0; i < first.length(); i++) {
+            for (int j = first.length() - i; j > 0; j--) {
+                for (int k = 0; k <= second.length() - j; k++) {
+                    if (first.regionMatches(i, second, k, j) && j > shared.length()) {
+                            shared = first.substring(i, i + j);
+                    }
+                }
+            }
+        } return shared;
+    }
+
+    /**
+     * testing.
+     * @param args is whatever is inside this main method
+     */
+    public static void main(final String[] args) {
+        System.out.print(longestSharedString("abcdefghijklmnopqrstuvwxyz", "abclmnop"));
+    }
 }
