@@ -11,6 +11,7 @@
 /**
  * Reclaim the given code, and figure out what the method does.
  */
+
 public class ReclamationProject {
     /**
      * Finds longest string that is common between the two parameters.
