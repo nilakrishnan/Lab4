@@ -40,8 +40,8 @@ public class ReclamationProject {
     }
 
     /**
-     * testing.
-     * @param args is whatever is inside this main method
+     * Test if it works!
+     * @param args inputs
      */
     public static void main(final String[] args) {
         System.out.print(longestSharedString("abcdefghijklmnopqrstuvwxyz", "abclmnop"));
