@@ -9,14 +9,14 @@
  */
 
 /**
- * what the heck is r.
+ * Reclaim the given code, and figure out what the method does.
  */
 public class ReclamationProject {
     /**
-     * now I know what r is.
-     * @param a value
-     * @param b value
-     * @return something string
+     * Finds longest string that is common between the two parameters.
+     * @param a first String
+     * @param b second String
+     * @return longest String between a and b
      */
     public static String longestSharedString(final String a, final String b) {
         String first = a;
